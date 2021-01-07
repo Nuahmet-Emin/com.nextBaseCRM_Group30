@@ -9,7 +9,7 @@ public class MessageFunction {
 
         public static void main(String[] args) throws InterruptedException {
 
-            //set up WebDriverManager
+ //set up WebDriverManager
             WebDriverManager.chromedriver().setup();
             //open browser
             WebDriver driver = new ChromeDriver();
@@ -17,7 +17,7 @@ public class MessageFunction {
             //Thread.sleep(3000);
             driver.get("https://login2.nextbasecrm.com");
             driver.manage().window().maximize();
-//lodin
+//login
             driver.findElement(By.xpath("//input[@name = 'USER_LOGIN']")).sendKeys("hr59@cybertekschool.com");
 //password
             driver.findElement(By.xpath("//input[@name = 'USER_PASSWORD']")).sendKeys("UserUser");
