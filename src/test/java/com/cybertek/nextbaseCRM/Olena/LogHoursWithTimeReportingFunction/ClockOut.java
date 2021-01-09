@@ -28,50 +28,7 @@ public class ClockOut {
 
         //click on "clock out" button from pop-up window:
         WebElement clockOut = driver.findElement(By.xpath("//*[text() = 'Clock Out']"));
-/*
-        //change clock out time:
-        driver.findElement(By.className("tm-popup-change-time-link")).click();
 
-        // get time before change:
-        String timeBeforeChange = driver.findElement(By.cssSelector("input[name='timeman_report_clock']")).getText();
-
-        //get hours before change:
-        String hoursBefore = driver.findElement(By.cssSelector("td[rowspan='2']")).getText();
-
-        //minutes before change:
-        String minutesBefore = driver.findElement(By.cssSelector("input[title='Minutes']")).getText();
-
-        //change hours and minutes:
-        WebElement increaseHours = driver.findElement(By.xpath("//td[@class='bxc-pointer'][1]"));
-        WebElement increaseMinutes = driver.findElement(By.xpath("//td[@class='bxc-pointer'][3]"));
-
-        //get hours after change:
-        String hoursAfter = driver.findElement(By.cssSelector("input[title='Hours']")).getText();
-
-        //compare hours before and after change:
-        if(hoursBefore.equals(hoursAfter)){
-            System.out.println("Clock out hours change functionality failed");
-        }else{
-            System.out.println("Clock out hours change functionality passed");
-        }
-
-        //minutes after change:
-        String minutesAfter = driver.findElement(By.cssSelector("input[title='Minutes']")).getText();
-
-        //compare minutes before and after change:
-        if(minutesBefore.equals(minutesAfter)){
-            System.out.println("Clock out minutes change functionality failed");
-        }else{
-            System.out.println("Clock out minutes change functionality passed");
-        }
-
-        //enter Reason into the text box:
-        driver.findElement(By.cssSelector("span[class='popup-window-button popup-window-button-decline']")).click();
-        driver.findElement(By.className("bx-tm-popup-clock-wnd-report-error")).sendKeys("done"+Keys.ENTER);
-
-        //clock out:
-        driver.findElement(By.cssSelector("span[class='popup-window-button popup-window-button-decline']")).click();
-*/
         //user should see "Continue working day":
         WebElement continueWorkingDay = driver.findElement(By.cssSelector("span[class='webform-small-button-text']"));
 
