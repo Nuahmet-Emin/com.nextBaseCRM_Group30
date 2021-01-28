@@ -79,39 +79,39 @@ public class PostHomePage {
                 System.out.println("Users can not see like button");
             }
 
-            Thread.sleep(10000);
+            Thread.sleep(3000);
 
             WebElement follow = driver.findElement(By.xpath("//a[.='Follow']"));
             System.out.println(follow.getText());
             follow.click();
-            Thread.sleep(10000);
-
+            Thread.sleep(3000);
 
             if (follow.isDisplayed()) {
-                System.out.println("Users can see follow button");
+                System.out.println("Users can see " + follow.getText() + "button");
             } else {
-                System.out.println("Users can not see follow button");
+                System.out.println("Users can not see " + follow.getText() + "button");
+            }
+            WebElement eyeButton = driver.findElement(By.xpath("//span[@class='feed-content-view-cnt-wrap']"));
+
+
+            eyeButton.click();
+            Thread.sleep(3000);
+
+            if (eyeButton.isDisplayed()) {
+                System.out.println("Users can see the list of people");
+            } else {
+                System.out.println("Users can not see the list of people");
             }
 
-            WebElement unFollow = driver.findElement(By.xpath("//a[.='Unfollow']"));
-
-
-            if (unFollow.isDisplayed()) {
-                System.out.println("Users can see Unfollow button");
-            } else {
-                System.out.println("Users can not see Unfollow button");
-            }
-
+            Thread.sleep(2000);
+            driver.findElement(By.id("user-name")).click();//getting to the logout link
+            Thread.sleep(2000);
+            driver.findElement(By.linkText("Log out")).click();//the actual log out link
+            driver.findElement(By.name("USER_LOGIN")).clear(); //username
         }
-
-        WebElement eyeButton = driver.findElement(By.xpath("//span[@id='feed-post-contentview-cnt-wrap-BLOG_POST-3004']"));
-        eyeButton.click();
-        Thread.sleep(3000);
-
-        if (eyeButton.isDisplayed()){
-            System.out.println("Users can see the list of people");
-        }else {
-            System.out.println("Users can not see the list of people");
-        }
+        driver.close();
     }
 }
+// test
+
+
