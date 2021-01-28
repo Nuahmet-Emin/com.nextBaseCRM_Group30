@@ -25,6 +25,7 @@ public class FindSearchBox {
         //QUESTION: to test different usernames and passwords, do I write a loop, separate codes,
         // or test individually in the existing code?
         //If loop, is there a way to test these credentials without opening the browser 6 times?
+        // Maybe navigateback??
 
         WebElement searchBox= driver.findElement(By.id("search-textbox-input"));
 
